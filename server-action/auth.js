@@ -1,10 +1,8 @@
 // services/auth.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:1337/api';
-
 export const login = async (identifier, password) => {
-  const response = await axios.post(`${API_URL}/auth/local`, {
+  const response = await axios.post(`${process.env.NEXT_API_URL}/auth/local`, {
     identifier,
     password,
   });
@@ -12,7 +10,7 @@ export const login = async (identifier, password) => {
 };
 
 export const register = async (username, email, password) => {
-  const response = await axios.post(`${API_URL}/auth/local/register`, {
+  const response = await axios.post(`${process.env.NEXT_API_URL}/auth/local/register`, {
     username,
     email,
     password,

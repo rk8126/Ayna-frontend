@@ -11,7 +11,7 @@ export default function Chat() {
   useEffect(() => {
     const token = Cookies.get('jwtToken') // Get the token from cache
     if (token) {
-      const socket = new WebSocket(`ws://localhost:1337?token=${token}`); // Include JWT in the URL
+      const socket = new WebSocket(`${process.env.NEXT_WS_URL}?token=${token}`); // Include JWT in the URL
       setWs(socket);
 
       socket.onmessage = async (event) => {

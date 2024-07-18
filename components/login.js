@@ -27,7 +27,7 @@ export function SignIn({setIsAuthenticated, setIsRegistering}){
   <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form onSubmit={handleLoginSubmit}>
       <div>
-        <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Username</label>
+        <label className="block text-sm font-medium leading-6 text-gray-900">Username</label>
         <div className="mt-2">
         <input
             type="text"
@@ -41,7 +41,7 @@ export function SignIn({setIsAuthenticated, setIsRegistering}){
 
       <div>
         <div className="flex items-center justify-between">
-          <label for="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
+          <label className="block text-sm font-medium leading-6 text-gray-900">Password</label>
         </div>
         <div className="mt-2">
         <input
